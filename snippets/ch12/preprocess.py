@@ -1,6 +1,7 @@
 import os
 import nltk
 import pickle
+import reader
 import multiprocessing as mp
 
 from slugify import slugify

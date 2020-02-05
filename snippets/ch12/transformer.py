@@ -207,13 +207,13 @@ class KeyphraseExtractor(BaseEstimator, TransformerMixin):
         return sequence.pad_sequences(clipped, maxlen=self.doclen)
 
 
-if __name__ == '__main__':
-    from sklearn.pipeline import Pipeline
-    from sklearn.feature_extraction.text import TfidfVectorizer
-
-    from am_reader import PickledAmazonReviewsReader
-    
-    corpus = PickledAmazonReviewsReader("../am_corpus_proc")
-    keydocs = list(KeyphraseExtractor().fit_transform(corpus.reviews()))
-    for doc in keydocs:
-        print(doc)
+# if __name__ == '__main__':
+#     from sklearn.pipeline import Pipeline
+#     from sklearn.feature_extraction.text import TfidfVectorizer
+#
+#     from am_reader import PickledAmazonReviewsReader
+#
+#     corpus = PickledAmazonReviewsReader("../am_corpus_proc")
+#     keydocs = list(KeyphraseExtractor().fit_transform(corpus.reviews()))
+#     for doc in keydocs:
+#         print(doc)

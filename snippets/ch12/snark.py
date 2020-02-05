@@ -47,7 +47,7 @@ def train_model(path, model, continuous=True, saveto=None, cv=12):
         scoring = 'r2_score'
     else:
         y = make_categorical(corpus)
-        scoring = 'f1_score'
+        scoring = 'f1'
 
     # Compute cross validation scores
     scores = cross_val_score(model, X, y, cv=cv, scoring=scoring)
